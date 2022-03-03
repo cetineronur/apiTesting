@@ -31,4 +31,5 @@ public class GetRequest06 {
         ,"bookingdates.checkin",equalTo("2019-11-11")
         ,"bookingdates.checkout", equalTo("2021-02-18"));
     }
+
 }
