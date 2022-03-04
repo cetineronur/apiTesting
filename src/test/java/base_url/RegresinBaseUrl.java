@@ -9,6 +9,7 @@ public class RegresinBaseUrl {
 
     @Before
     public void setUp(){
+
         spec01= new RequestSpecBuilder().setBaseUri("https://reqres.in").build();
     }
 }

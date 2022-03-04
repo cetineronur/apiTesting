@@ -22,7 +22,7 @@ body icerisindeki idsi 5 olan datayi
 
         spec01.pathParams("parametre1", "api","parametre2", "user2");
         Response response = given().spec(spec01).when().get("/{parametre1}/{parametre2}"); //---> /api/users
-       // response.prettyPrint();
+        response.prettyPrint();
 
         // Matcher equal class
         response.then().assertThat().body("data[4].color", equalTo("#E2583E")
