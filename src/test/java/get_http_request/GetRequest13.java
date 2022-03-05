@@ -37,7 +37,7 @@ public class GetRequest13 extends GMIBankBaseUrl {
                 .when().get("/{bir}/{iki}");
         // "/{bir}/{iki}" -> /tp-customers/114351
 
-        response.prettyPrint();
+        //response.prettyPrint();
 
         //MATCHERS CLASS iLE
         response.then().assertThat().body("firstName", equalTo("Della")
@@ -47,8 +47,8 @@ public class GetRequest13 extends GMIBankBaseUrl {
                 , "address", equalTo("75164 McClure Stream")
                 , "country.name", equalTo("USA")
                 , "state", equalTo("New York43")
-                , "accounts[0].balance", equalTo(11190)
-                , "accounts[1].balance", equalTo(69700));
+                , "accounts[0].balance", equalTo(69700)
+                , "accounts[1].balance", equalTo(11190));
 
         //JSON PATH iLE
 
@@ -60,8 +60,8 @@ public class GetRequest13 extends GMIBankBaseUrl {
         Assert.assertEquals("75164 McClure Stream", json.getString("address"));
         Assert.assertEquals("USA", json.getString("country.name"));
         Assert.assertEquals("New York43", json.getString("state"));
-        Assert.assertEquals(11190, json.getInt("accounts[0].balance"));
-        Assert.assertEquals(69700, json.getInt("accounts[1].balance"));
+        Assert.assertEquals(69700, json.getInt("accounts[0].balance"));
+        Assert.assertEquals(11190, json.getInt("accounts[1].balance"));
 
     }
 }
