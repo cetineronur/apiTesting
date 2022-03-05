@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 import static io.restassured.RestAssured.given;
 
@@ -43,7 +44,7 @@ public class GetRequest17 extends GMIBankBaseUrl {
                 .when().get("/{bir}/{iki}");
         //response.prettyPrint();
 
-        Map<String, Object> actualData = response.as(HashMap.class); // De-Serialization Jsondan JAva'ya
+        Map<String, Object> actualData = response.as(TreeMap.class); // De-Serialization Jsondan JAva'ya
         System.out.println("Actual Data: "+actualData);
 
         //) Dogrulama
