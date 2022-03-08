@@ -4,7 +4,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
-public class JasonPalaceHolderBaseUrl {
+public class JsonPalaceHolderBaseUrl {
     protected RequestSpecification speq04;
 
     @Before

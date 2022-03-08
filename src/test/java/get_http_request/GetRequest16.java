@@ -1,6 +1,6 @@
 package get_http_request;
 
-import base_url.JasonPalaceHolderBaseUrl;
+import base_url.JsonPalaceHolderBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class GetRequest16 extends JasonPalaceHolderBaseUrl {
+public class GetRequest16 extends JsonPalaceHolderBaseUrl {
     /*
    https://jsonplaceholder.typicode.com/todos/7
 

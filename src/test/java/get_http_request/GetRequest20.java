@@ -1,9 +1,8 @@
 package get_http_request;
 
-import base_url.JasonPalaceHolderBaseUrl;
+import base_url.JsonPalaceHolderBaseUrl;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -12,7 +11,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
 
-public class GetRequest20 extends JasonPalaceHolderBaseUrl {
+public class GetRequest20 extends JsonPalaceHolderBaseUrl {
 
     /*
 https://jsonplaceholder.typicode.com/todos/2
