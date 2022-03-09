@@ -2,7 +2,7 @@ package test_data;
 
 import java.util.HashMap;
 
-public class HErOkuAppTestData {
+public class HerOkuAppTestData {
 
     public HashMap<String, Object> setUpTestData(){
 
@@ -13,10 +13,9 @@ public class HErOkuAppTestData {
         HashMap<String, Object> expectedData = new HashMap<>();
         expectedData.put("firstname","Ali");
         expectedData.put("lastname","Can");
-        expectedData.put("totalprice",500);
+        expectedData.put("totalprice",700);
         expectedData.put("depositpaid",true);
         expectedData.put("bookingdates",bookingdates);
-
 
         return expectedData;
     }
