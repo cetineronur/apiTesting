@@ -2,8 +2,10 @@ package get_http_request;
 
 import base_url.HerokuAppBaseUrl;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
+import org.junit.Assert;
 import org.junit.Test;
 import test_data.HerOkuAppTestData;
 
@@ -53,9 +55,24 @@ olduğunu test edin
                 .auth()
                 .basic("Admin","password123")
                 .spec(spec05)
-                .body(expectedRequestData.toString())
+                .body(expectedRequestData.toString()) //Jsonpath de toString() kullanilir.
                 .when()
                 .post("/{1}");
         response.prettyPrint();
+
+        //4)Dogrulama
+        //1.yol JSON PATH
+
+        JsonPath json = response.jsonPath();
+        response.then().assertThat().statusCode(200);
+        Assert.assertEquals(expectedRequestData.getString("firstname"), json.getString("booking.firstname"));
+        Assert.assertEquals(expectedRequestData.getString("lastname"), json.getString("booking.lastname"));
+        Assert.assertEquals(expectedRequestData.getInt("totalprice"), json.getInt("booking.totalprice"));
+        Assert.assertEquals(expectedRequestData.getBoolean("depositpaid"), json.getBoolean("booking.depositpaid"));
+
+        Assert.assertEquals(expectedRequestData.getJSONObject("bookingdates").get("checkin"),
+                json.getString("booking.bookingdates.checkin"));
+        Assert.assertEquals(expectedRequestData.getJSONObject("bookingdates").get("checkout"),
+                json.getString("booking.bookingdates.checkout"));
     }
 }
