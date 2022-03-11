@@ -1,4 +1,4 @@
-package get_http_request;
+package get_http_request.day7;
 
 import base_url.HerokuAppBaseUrl;
 import io.restassured.http.ContentType;
