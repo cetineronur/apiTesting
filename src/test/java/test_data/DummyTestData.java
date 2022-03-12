@@ -1,5 +1,7 @@
 package test_data;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -68,5 +70,19 @@ Sondan 3. çalışanın maaşının 675000 olduğunu
         expecedData.put("status","success");
         expecedData.put("message", "Successfully! Record has been added.");
         return expecedData;
+    }
+     /*
+{
+"status": "success",
+"data": "2",
+"message": "Successfully! Record has been deleted"
+}
+   */
+    public JSONObject setUpDeleteExpectedData(){
+        JSONObject expectedData = new JSONObject();
+        expectedData.put("status","success");
+        expectedData.put("data","2");
+        expectedData.put("message","Successfully! Record has been deleted");
+        return expectedData;
     }
 }
