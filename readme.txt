@@ -1,1 +1,0 @@
-Ders ile ilgili dosyalar eklenecektir
