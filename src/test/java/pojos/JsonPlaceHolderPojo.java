@@ -1,22 +1,23 @@
 package pojos;
 
 public class JsonPlaceHolderPojo {
-     /*
-   https://jsonplaceholder.typicode.com/todos url 'ine bir request gönderildiğinde
-Request body{
-"userId": 21,
-"id": 201,
-"title": "Tidy your room",
-"completed": false
-}
-*/
-    //1) Degiskenleri private olarak tanimlayacagiz.
+    /*
+    https://jsonplaceholder.typicode.com/todos url ‘ine bir request gönderildiğinde
+    {
+    "userId": 21,
+    "id": 201,
+    "title": "Tidy your room",
+    "completed": false
+    }
+    */
+
+    //1) Değişekleri private olarak tanımlayacağız.
     private int userId;
     private int id;
     private String title;
     private boolean completed;
 
-    //2) Degiskenlerin degerlerini ulasmak icin getter ve setter olusturulur.
+    //2) Değişkenlerin değerlerine ulaşmak için getter ve setter olusturulur
 
     public int getUserId() {
         return userId;
@@ -50,11 +51,13 @@ Request body{
         this.completed = completed;
     }
 
-    //3) Parametereli ve parametresiz Constructor olustur
+    //3) Parametreli ve Parametresiz Constructor olustur.
 
+    //Parametresiz Constructor
     public JsonPlaceHolderPojo() {
     }
 
+    //Parametreli Constructor
     public JsonPlaceHolderPojo(int userId, int id, String title, boolean completed) {
         this.userId = userId;
         this.id = id;
@@ -62,7 +65,7 @@ Request body{
         this.completed = completed;
     }
 
-    //4)toString methodu olustur
+    //4) toString methodu oluştur
 
     @Override
     public String toString() {
